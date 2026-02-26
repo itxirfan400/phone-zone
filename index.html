@@ -3,20 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Phone Zone - Gaya, Bihar</title>
-
+<title>Phone Zone</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{
-background:#07131c;
-color:#fff;
-overflow-x:hidden;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
-section{padding:70px 20px}
-h1,h2,h3{font-weight:600}
-p{color:#aaa;line-height:1.6}
+
+body{
+background:#000;
+color:#fff;
+}
 
 /* HEADER */
 header{
@@ -24,152 +25,153 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:18px 20px;
-background:#0b1b25;
+background:#0d0d0d;
 position:sticky;
 top:0;
 z-index:1000;
 }
+
 .logo{
-display:flex;
-align-items:center;
-gap:10px;
-}
-.logo-icon{
-width:38px;height:38px;
-border-radius:10px;
-background:linear-gradient(135deg,#19c463,#0f7a43);
-display:flex;
-align-items:center;
-justify-content:center;
-color:#000;
-font-size:18px;
-}
-.menu{font-size:24px}
-
-/* HERO */
-.hero{
-background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),
-url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1200&auto=format&fit=crop');
-background-size:cover;
-background-position:center;
-padding:100px 20px;
-text-align:center;
-}
-.badge{
-display:inline-block;
-background:#0f3f2a;
-padding:8px 16px;
-border-radius:30px;
-color:#19c463;
-font-size:13px;
-margin-bottom:15px;
-}
-.hero h1{
-font-size:30px;
-line-height:1.3;
-}
-.hero h1 span{color:#19c463}
-.hero p{margin:15px 0}
-
-.btn{
-display:block;
-width:100%;
-padding:14px;
-border-radius:35px;
-text-align:center;
-text-decoration:none;
+font-size:20px;
 font-weight:600;
-margin-top:15px;
+color:#00ff99;
 }
-.btn-green{
-background:linear-gradient(90deg,#19c463,#25e07b);
-color:#000;
+
+.hamburger{
+font-size:24px;
+cursor:pointer;
 }
-.btn-dark{
-background:#1c2630;
+
+.nav{
+position:fixed;
+top:0;
+right:-100%;
+width:220px;
+height:100%;
+background:#111;
+padding:60px 20px;
+transition:.3s;
+}
+
+.nav.active{
+right:0;
+}
+
+.nav a{
+display:block;
 color:#fff;
-border:1px solid #333;
-}
-
-/* STATS */
-.stats{
-display:flex;
-justify-content:space-between;
-margin-top:30px;
-text-align:center;
-}
-.stats div h3{color:#19c463}
-
-/* CARD */
-.card{
-background:#0f1f2a;
-border-radius:18px;
-padding:25px;
+text-decoration:none;
 margin-bottom:20px;
+font-size:16px;
 }
 
-/* PRODUCTS */
-.product img{
-width:100%;
-border-radius:15px;
+/* SECTION */
+.section{
+padding:20px;
 }
+
+/* PRODUCT CARD */
+.product-card{
+background:#111;
+border-radius:18px;
+overflow:hidden;
+margin-bottom:25px;
+box-shadow:0 8px 25px rgba(0,0,0,.6);
+transition:.3s;
+}
+
+.product-card:hover{
+transform:translateY(-5px);
+}
+
+.product-img{
+position:relative;
+height:220px;
+overflow:hidden;
+}
+
+.product-img img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.brand-badge{
+position:absolute;
+top:12px;
+left:12px;
+background:#000;
+padding:5px 12px;
+border-radius:20px;
+font-size:12px;
+}
+
+.product-content{
+padding:18px;
+}
+
+.product-content h3{
+font-size:16px;
+margin-bottom:6px;
+font-weight:500;
+}
+
 .price{
-color:#19c463;
+color:#00ff99;
 font-weight:600;
 margin:8px 0;
 }
 
-/* MAP */
-iframe{
-width:100%;
-border-radius:15px;
-height:220px;
-border:0;
+.product-footer{
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
-/* TESTIMONIAL */
-.review{
-background:#0f1f2a;
-border-radius:15px;
-padding:20px;
-margin-bottom:15px;
+.inquire-btn{
+background:#00cc66;
+border:none;
+padding:10px 18px;
+border-radius:25px;
+color:#000;
+font-weight:600;
+cursor:pointer;
 }
 
-/* FOOTER */
-footer{
-background:#081018;
-padding:40px 20px;
-color:#aaa;
-}
-footer a{
-display:block;
-color:#aaa;
-text-decoration:none;
-margin:6px 0;
-}
-footer a:hover{color:#19c463}
-.copy{
-text-align:center;
-margin-top:20px;
-font-size:12px;
+.arrow-circle{
+width:35px;
+height:35px;
+border-radius:50%;
+background:#00cc66;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#000;
+font-weight:bold;
 }
 
-/* FLOATING WHATSAPP */
-.whatsapp{
+/* WHATSAPP */
+.whatsapp-float{
 position:fixed;
 bottom:20px;
 right:20px;
-width:60px;
-height:60px;
+width:55px;
+height:55px;
 border-radius:50%;
 background:linear-gradient(135deg,#19c463,#0f7a43);
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:26px;
+font-size:24px;
 color:#000;
 text-decoration:none;
 box-shadow:0 8px 25px rgba(0,0,0,.4);
+z-index:999;
+transition:.3s;
+}
+
+.whatsapp-float:hover{
+transform:scale(1.1);
 }
 </style>
 </head>
@@ -177,102 +179,108 @@ box-shadow:0 8px 25px rgba(0,0,0,.4);
 <body>
 
 <header>
-<div class="logo">
-<div class="logo-icon">📱</div>
-<div>
-<h3>Phone Zone</h3>
-<small style="color:#19c463">Gaya, Bihar</small>
-</div>
-</div>
-<div class="menu">☰</div>
+<div class="logo">Phone Zone</div>
+<div class="hamburger" onclick="toggleMenu()">☰</div>
 </header>
 
-<section class="hero">
-<div class="badge">✨ Trusted Since Years in Gaya</div>
-<h1>Best Deals on <span>Second Hand Smartphones</span> in Gaya</h1>
-<p>Premium Quality Phones. Trusted Prices. Local Store You Can Rely On.</p>
-
-<a href="tel:9162414178" class="btn btn-green">📞 Call Now</a>
-<a href="https://www.google.com/maps/search/?api=1&query=Prem+Talkies+More+Gaya+Bihar" class="btn btn-dark">📍 Get Directions</a>
-
-<div class="stats">
-<div><h3>5000+</h3><small>Happy Customers</small></div>
-<div><h3>100%</h3><small>Quality Assured</small></div>
-<div><h3>Local</h3><small>Store in Gaya</small></div>
-</div>
-</section>
-
-<section>
-<h2>Browse Our <span style="color:#19c463">Product Range</span></h2>
-
-<div class="card product">
-<img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?q=80&w=800&auto=format&fit=crop">
-<h3>iPhone</h3>
-<div class="price">₹15,000 - ₹70,000</div>
-<a href="https://wa.me/919162414178" class="btn btn-green">Inquire Now</a>
-</div>
-
-<div class="card product">
-<img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?q=80&w=800&auto=format&fit=crop">
-<h3>Samsung</h3>
-<div class="price">₹8,000 - ₹50,000</div>
-<a href="https://wa.me/919162414178" class="btn btn-green">Inquire Now</a>
-</div>
-</section>
-
-<section>
-<h2>Visit Our Store Today</h2>
-<iframe src="https://www.google.com/maps?q=Prem+Talkies+More+Gaya+Bihar&output=embed"></iframe>
-
-<div class="card">
-<h3>Our Address</h3>
-<p>Prem Talkies More, Shaheed Road, Dulhingunj, Gaya</p>
-</div>
-
-<a href="https://www.google.com/maps/search/?api=1&query=Prem+Talkies+More+Gaya+Bihar" class="btn btn-green">Get Directions</a>
-</section>
-
-<section>
-<h2>What Our Customers Say</h2>
-
-<div class="review">
-⭐ ⭐ ⭐ ⭐ ⭐  
-<p>"Best place to buy second-hand phones in Gaya."</p>
-<strong>Rajesh Kumar</strong>
-</div>
-
-<div class="review">
-⭐ ⭐ ⭐ ⭐ ⭐  
-<p>"Very genuine shop and great after sales support."</p>
-<strong>Priya Singh</strong>
-</div>
-</section>
-
-<section>
-<div class="card" style="text-align:center;background:linear-gradient(135deg,#19c463,#0f7a43);color:#000">
-<h2>Ready to Buy Your Phone?</h2>
-<p>Contact us today and get best deals.</p>
-<a href="tel:9162414178" class="btn btn-dark">91624 14178</a>
-</div>
-</section>
-
-<footer>
-<h3>Phone Zone</h3>
-<p>Your trusted destination for premium second-hand smartphones in Gaya.</p>
-
-<h4>Quick Links</h4>
+<div class="nav" id="navMenu">
 <a href="#">Home</a>
-<a href="#">About</a>
 <a href="#">Products</a>
-<a href="#">Location</a>
+<a href="#">About</a>
 <a href="#">Contact</a>
-
-<div class="copy">
-© 2026 Phone Zone. All rights reserved.
 </div>
-</footer>
 
-<a href="https://wa.me/919162414178" class="whatsapp" target="_blank">💬</a>
+<section class="section">
+
+<!-- iPhone -->
+<div class="product-card">
+<div class="product-img">
+<span class="brand-badge">iPhone</span>
+<img src="https://images.unsplash.com/photo-1603899122950-07eab94f3c59">
+</div>
+<div class="product-content">
+<h3>Premium Apple devices</h3>
+<div class="price">₹15,000 – ₹1,00,000</div>
+<div class="product-footer">
+<button class="inquire-btn">Inquire Now</button>
+<div class="arrow-circle">→</div>
+</div>
+</div>
+</div>
+
+<!-- Samsung -->
+<div class="product-card">
+<div class="product-img">
+<span class="brand-badge">Samsung</span>
+<img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf">
+</div>
+<div class="product-content">
+<h3>Flagship & midrange models</h3>
+<div class="price">₹10,000 – ₹50,000</div>
+<div class="product-footer">
+<button class="inquire-btn">Inquire Now</button>
+<div class="arrow-circle">→</div>
+</div>
+</div>
+</div>
+
+<!-- Vivo -->
+<div class="product-card">
+<div class="product-img">
+<span class="brand-badge">Vivo</span>
+<img src="https://images.unsplash.com/photo-1623126908029-58cb08a2b272">
+</div>
+<div class="product-content">
+<h3>Camera & performance phones</h3>
+<div class="price">₹6,000 – ₹35,000</div>
+<div class="product-footer">
+<button class="inquire-btn">Inquire Now</button>
+<div class="arrow-circle">→</div>
+</div>
+</div>
+</div>
+
+<!-- Oppo -->
+<div class="product-card">
+<div class="product-img">
+<span class="brand-badge">Oppo</span>
+<img src="https://images.unsplash.com/photo-1580910051074-3eb694886505">
+</div>
+<div class="product-content">
+<h3>Stylish design phones</h3>
+<div class="price">₹7,000 – ₹40,000</div>
+<div class="product-footer">
+<button class="inquire-btn">Inquire Now</button>
+<div class="arrow-circle">→</div>
+</div>
+</div>
+</div>
+
+<!-- Realme -->
+<div class="product-card">
+<div class="product-img">
+<span class="brand-badge">Realme</span>
+<img src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc">
+</div>
+<div class="product-content">
+<h3>Best value for money</h3>
+<div class="price">₹5,000 – ₹25,000</div>
+<div class="product-footer">
+<button class="inquire-btn">Inquire Now</button>
+<div class="arrow-circle">→</div>
+</div>
+</div>
+</div>
+
+</section>
+
+<a href="https://wa.me/919162414178" class="whatsapp-float" target="_blank">💬</a>
+
+<script>
+function toggleMenu(){
+document.getElementById("navMenu").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
